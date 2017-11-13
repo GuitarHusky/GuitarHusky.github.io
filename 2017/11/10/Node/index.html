@@ -87,12 +87,12 @@
 <meta property="og:url" content="https://guitarhusky.github.io/2017/11/10/Node/index.html">
 <meta property="og:site_name" content="Guitar Husky Blog">
 <meta property="og:description" content="Node.js Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。Node的内置模块fs文件操作模块 123456789101112131415var fs = require(&quot;fs&quot;);// 异步读取fs.readFi">
-<meta property="og:image" content="https://guitarhusky.github.io/2017/11/public/images/node.jpg">
-<meta property="og:updated_time" content="2017-11-13T13:26:00.400Z">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png">
+<meta property="og:updated_time" content="2017-11-13T13:54:40.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node">
 <meta name="twitter:description" content="Node.js Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。Node的内置模块fs文件操作模块 123456789101112131415var fs = require(&quot;fs&quot;);// 异步读取fs.readFi">
-<meta name="twitter:image" content="https://guitarhusky.github.io/2017/11/public/images/node.jpg">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png">
 
 
 
@@ -188,7 +188,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -198,7 +198,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -272,7 +272,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T21:21:51+08:00">
                 2017-11-10
@@ -322,7 +322,7 @@
       
 
       
-        <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p><img src="../../public/images/node.jpg" alt=""></p>
+        <h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p><img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png" alt=""></p>
 <h2 id="Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。"><a href="#Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。" class="headerlink" title="Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。"></a>Node是一个JavaScript运行时环境，用来编写后台服务器处理程序。可与PHP、Java比肩的强大编程语言，它更多的是底层实现原理，怎么创建服务器，怎么跳转路径等等。是一门比较灵活的语言，客观的说不适合新手用来入门服务端。</h2><h3 id="Node的内置模块"><a href="#Node的内置模块" class="headerlink" title="Node的内置模块"></a>Node的内置模块</h3><p><strong>fs文件操作模块</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 异步读取</span></div><div class="line">fs.readFile(<span class="string">'input.txt'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</div><div class="line">   <span class="keyword">if</span> (err) &#123;</div><div class="line">       <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</div><div class="line">   &#125;</div><div class="line">   <span class="built_in">console</span>.log(<span class="string">"异步读取: "</span> + data.toString());</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 同步读取</span></div><div class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">'input.txt'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"同步读取: "</span> + data.toString());</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"程序执行完毕。"</span>);</div></pre></td></tr></table></figure>
 <p><strong>http服务器操作模块</strong></p>
@@ -553,10 +553,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -581,7 +581,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -664,7 +664,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
