@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Guitar Husky Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="去除首尾的12//去除首尾的‘/’input = input.replace(/^\/*|\/*$/g,&amp;apos;&amp;apos;); javascript:; 、javascript:void(0)1href.match(/^(javascript\s*\:|#)/); 匹配12var str = &amp;quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的正则表达式">
+<meta property="og:url" content="https://guitarhusky.github.io/2018/01/20/rgp/index.html">
+<meta property="og:site_name" content="Guitar Husky Blog">
+<meta property="og:description" content="去除首尾的12//去除首尾的‘/’input = input.replace(/^\/*|\/*$/g,&amp;apos;&amp;apos;); javascript:; 、javascript:void(0)1href.match(/^(javascript\s*\:|#)/); 匹配12var str = &amp;quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516450431931&di=6e2cd2316ead8b91540ae1c3c8f0d076&imgtype=0&src=http%3A%2F%2Fimg.imooc.com%2F57ab14aa0001bc9706000338.jpg">
+<meta property="og:updated_time" content="2018-01-20T09:26:57.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见的正则表达式">
+<meta name="twitter:description" content="去除首尾的12//去除首尾的‘/’input = input.replace(/^\/*|\/*$/g,&amp;apos;&amp;apos;); javascript:; 、javascript:void(0)1href.match(/^(javascript\s*\:|#)/); 匹配12var str = &amp;quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516450431931&di=6e2cd2316ead8b91540ae1c3c8f0d076&imgtype=0&src=http%3A%2F%2Fimg.imooc.com%2F57ab14aa0001bc9706000338.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'GuitarHusky'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://guitarhusky.github.io/2018/01/20/rgp/"/>
+
+
+
+
+
+  <title>常见的正则表达式 | Guitar Husky Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/GuitarHusky/GuitarHusky.github.io"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Guitar Husky Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Web 前端</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://guitarhusky.github.io/2018/01/20/rgp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Guitar Husky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/favicon-32x32-next.ico">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Guitar Husky Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常见的正则表达式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T17:21:00+08:00">
+                2018-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/20/rgp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2018/01/20/rgp/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/20/rgp/" class="leancloud_visitors" data-flag-title="常见的正则表达式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1516450431931&amp;di=6e2cd2316ead8b91540ae1c3c8f0d076&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.imooc.com%2F57ab14aa0001bc9706000338.jpg" alt=""></p>
+<h2 id="去除首尾的"><a href="#去除首尾的" class="headerlink" title="去除首尾的"></a>去除首尾的</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//去除首尾的‘/’</div><div class="line">input = input.replace(/^\/*|\/*$/g,&apos;&apos;);</div></pre></td></tr></table></figure>
+<h2 id="javascript-、javascript-void-0"><a href="#javascript-、javascript-void-0" class="headerlink" title="javascript:; 、javascript:void(0)"></a>javascript:; 、javascript:void(0)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">href.match(/^(javascript\s*\:|#)/);</div></pre></td></tr></table></figure>
+<h2 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f546250; refresh_token=702f4815-a0ff-456c-82ce-24e4d7d619e6; account_uid=1361177947320160506170322436&quot;;</div><div class="line">str.match(/account_uid=([^\=]+(\;)|(.*))/ig);</div></pre></td></tr></table></figure>
+<h2 id="匹配一些字符"><a href="#匹配一些字符" class="headerlink" title="匹配一些字符"></a>匹配一些字符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &apos;asdf html-webpack-plugin for &quot;index/index.html&quot; asdfasdf&apos;;</div><div class="line">str.match(/html-webpack-plugin for \&quot;(.*)\&quot;/ig);</div><div class="line">console.log(RegExp.$1) //=&gt;index/index.html</div></pre></td></tr></table></figure>
+<h2 id="关键字符替换"><a href="#关键字符替换" class="headerlink" title="关键字符替换"></a>关键字符替换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;css/[hash:8].index-index.css&apos;.replace(/\[(?:(\w+):)?(contenthash|hash)(?::([a-z]+\d*))?(?::(\d+))?\]/ig,&apos;(.*)&apos;);</div><div class="line">//=&gt; css/(.*).index-index.css</div></pre></td></tr></table></figure>
+<h2 id="替换参数中的值"><a href="#替换参数中的值" class="headerlink" title="替换参数中的值"></a>替换参数中的值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var str  = &apos;&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&apos;;</div><div class="line">str.replace(/&lt;html[^&gt;]*manifest=&quot;([^&quot;]*)&quot;[^&gt;]*&gt;/,function(word)&#123;</div><div class="line">   return word.replace(/manifest=&quot;([^&quot;]*)&quot;/,&apos;manifest=&quot;&apos;+url+&apos;&quot;&apos;);</div><div class="line">&#125;).replace(/&lt;html(\s?[^\&gt;]*\&gt;)/,function(word)&#123;</div><div class="line">    if(word.indexOf(&apos;manifest&apos;)) return word;</div><div class="line">    return word.replace(&apos;&lt;html&apos;,&apos;&lt;html manifest=&quot;&apos;+url+&apos;&quot;&apos;);</div><div class="line">&#125;);</div><div class="line">//原：&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">//替换成=&gt; &lt;!DOCTYPE html&gt;&lt;html manifest=&quot;cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</div></pre></td></tr></table></figure>
+<h2 id="调换"><a href="#调换" class="headerlink" title="调换"></a>调换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var name = &quot;Doe, John&quot;; </div><div class="line">name.replace(/(\w+)\s*, \s*(\w+)/, &quot;$2 $1&quot;); </div><div class="line">//=&gt; &quot;John Doe&quot;</div></pre></td></tr></table></figure>
+<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &apos;asfdf === sdfaf ##&apos;</div><div class="line">str.match(/[^===]+(?=[===])/g) // 截取 ===之前的内容</div><div class="line"></div><div class="line">str.replace(/\n/g,&apos;&apos;)  // 替换字符串中的 \n 换行字符</div></pre></td></tr></table></figure>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="小数点后几位验证"><a href="#小数点后几位验证" class="headerlink" title="小数点后几位验证"></a>小数点后几位验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 精确到1位小数</div><div class="line">/^[1-9][0-9]*$|^[1-9][0-9]*\.[0-9]$|^0\.[0-9]$/.test(1.2);</div><div class="line"></div><div class="line">// 精确到2位小数</div><div class="line">/^[0-9]+(.[0-9]&#123;2&#125;)?$/.test(1.221);</div></pre></td></tr></table></figure>
+<h3 id="密码强度正则"><a href="#密码强度正则" class="headerlink" title="密码强度正则"></a>密码强度正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</div><div class="line">/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$/.test(&quot;weeeeeeeW2&quot;);</div><div class="line">//密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</div><div class="line">/^.*(?=.&#123;6,&#125;)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/.test(&quot;diaoD123#&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="校验中文"><a href="#校验中文" class="headerlink" title="校验中文"></a>校验中文</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是d&quot;); //false</div><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是&quot;); //true</div><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是&quot;); //true</div></pre></td></tr></table></figure>
+<h3 id="包含中文正则"><a href="#包含中文正则" class="headerlink" title="包含中文正则"></a>包含中文正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/[\u4E00-\u9FA5]/.test(&quot;但是d&quot;) //true</div></pre></td></tr></table></figure>
+<h3 id="由数字、26个英文字母或下划线组成的字符串"><a href="#由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26个英文字母或下划线组成的字符串"></a>由数字、26个英文字母或下划线组成的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/^\w+$/.test(&quot;ds2_@#&quot;); // false</div></pre></td></tr></table></figure>
+<h3 id="身份证号正则"><a href="#身份证号正则" class="headerlink" title="身份证号正则"></a>身份证号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//身份证号（18位）正则</div><div class="line">/^[1-9]\d&#123;5&#125;(18|19|([23]\d))\d&#123;2&#125;((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d&#123;3&#125;[0-9Xx]$/.test(&quot;42112319870115371X&quot;);</div><div class="line">//输出 false</div></pre></td></tr></table></figure>
+<h3 id="校验日期"><a href="#校验日期" class="headerlink" title="校验日期"></a>校验日期</h3><p>“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//日期正则，简单判定,未做月份及日期的判定</div><div class="line">var dP1 = /^\d&#123;4&#125;(\-)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$/;</div><div class="line">//输出 true</div><div class="line">console.log(dP1.test(&quot;2017-05-11&quot;));</div><div class="line">//输出 true</div><div class="line">console.log(dP1.test(&quot;2017-15-11&quot;));</div><div class="line">//日期正则，复杂判定</div><div class="line">var dP2 = /^(?:(?!0000)[0-9]&#123;4&#125;-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]&#123;2&#125;(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/;</div><div class="line">//输出 true</div><div class="line">console.log(dP2.test(&quot;2017-02-11&quot;));</div><div class="line">//输出 false</div><div class="line">console.log(dP2.test(&quot;2017-15-11&quot;));</div><div class="line">//输出 false</div><div class="line">console.log(dP2.test(&quot;2017-02-29&quot;));</div><div class="line">// true</div></pre></td></tr></table></figure>
+<h2 id="校验文件后缀"><a href="#校验文件后缀" class="headerlink" title="校验文件后缀"></a>校验文件后缀</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  var strRegex = &quot;(.jpg|.gif|.txt)&quot;;</div><div class="line">  var re=new RegExp(strRegex);</div><div class="line">  if (re.test(str))&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpgsss&apos;); //=&gt; false</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpg?&apos;); //=&gt; true</div></pre></td></tr></table></figure>
+<h3 id="用户名正则"><a href="#用户名正则" class="headerlink" title="用户名正则"></a>用户名正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//用户名正则，4到16位（字母，数字，下划线，减号）</div><div class="line">/^[a-zA-Z0-9_-]&#123;4,16&#125;$/.test(&quot;diaodiao&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="整数正则"><a href="#整数正则" class="headerlink" title="整数正则"></a>整数正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^\d+$/.test(&quot;42&quot;);    //正整数正则  -&gt; 输出 true</div><div class="line">/^-\d+$/.test(&quot;-42&quot;);  //负整数正则  -&gt; 输出 true</div><div class="line">/^-?\d+$/.test(&quot;-42&quot;); //整数正则  -&gt; 输出 true</div></pre></td></tr></table></figure>
+<h3 id="数字正则"><a href="#数字正则" class="headerlink" title="数字正则"></a>数字正则</h3><p>可以是整数也可以是浮点数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^\d*\.?\d+$/.test(&quot;42.2&quot;);     //正数正则  -&gt; 输出 true</div><div class="line">/^-\d*\.?\d+$/.test(&quot;-42.2&quot;);   //负数正则 -&gt; 输出 true</div><div class="line">/^-?\d*\.?\d+$/.test(&quot;-42.2&quot;);  //数字正则 -&gt; 输出 true</div></pre></td></tr></table></figure>
+<h3 id="Email正则"><a href="#Email正则" class="headerlink" title="Email正则"></a>Email正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//Email正则</div><div class="line">/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]&#123;2,4&#125;)$/.test(&quot;wowohoo@qq.com&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="手机号码正则"><a href="#手机号码正则" class="headerlink" title="手机号码正则"></a>手机号码正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//手机号正则</div><div class="line">/^1[34578]\d&#123;9&#125;$/.test(&quot;13611778887&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="URL正则"><a href="#URL正则" class="headerlink" title="URL正则"></a>URL正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//URL正则</div><div class="line">/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]&#123;2,6&#125;)([\/\w \.-]*)*\/?$/.test(&quot;http://wangchujiang.com&quot;);</div><div class="line">//输出 true</div><div class="line"></div><div class="line">//获取url中域名、协议正则 &apos;http://xxx.xx/xxx&apos;,&apos;https://xxx.xx/xxx&apos;,&apos;//xxx.xx/xxx&apos;</div><div class="line">/^(http(?:|s)\:)*\/\/([^\/]+)/.test(&quot;http://www.baidu.com&quot;);</div><div class="line"></div><div class="line">// 必须有协议 </div><div class="line">/^[a-zA-Z]+:\/\//.test(&quot;http://www.baidu.com&quot;);</div></pre></td></tr></table></figure>
+<h3 id="IPv4地址正则"><a href="#IPv4地址正则" class="headerlink" title="IPv4地址正则"></a>IPv4地址正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//ipv4地址正则</div><div class="line">/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(&quot;192.168.130.199&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="十六进制颜色正则"><a href="#十六进制颜色正则" class="headerlink" title="十六进制颜色正则"></a>十六进制颜色正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//RGB Hex颜色正则</div><div class="line">/^#?([a-fA-F0-9]&#123;6&#125;|[a-fA-F0-9]&#123;3&#125;)$/.test(&quot;#b8b8b8&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
+<h3 id="QQ号码正则"><a href="#QQ号码正则" class="headerlink" title="QQ号码正则"></a>QQ号码正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//QQ号正则，5至11位</div><div class="line">/^[1-9][0-9]&#123;4,10&#125;$/.test(&quot;398188661&quot;);//输出 true</div></pre></td></tr></table></figure>
+<h3 id="微信号正则"><a href="#微信号正则" class="headerlink" title="微信号正则"></a>微信号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//微信号正则，6至20位，以字母开头，字母，数字，减号，下划线</div><div class="line">/^[a-zA-Z]([-_a-zA-Z0-9]&#123;5,19&#125;)+$/.test(&quot;jslite&quot;); //输出 true</div></pre></td></tr></table></figure>
+<h3 id="车牌号正则"><a href="#车牌号正则" class="headerlink" title="车牌号正则"></a>车牌号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//车牌号正则</div><div class="line">/^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]&#123;1&#125;[A-Z]&#123;1&#125;[A-Z0-9]&#123;4&#125;[A-Z0-9挂学警港澳]&#123;1&#125;$/.test(&quot;沪B99116&quot;) //输出 true</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/13/header/" rel="next" title="Web">
+                <i class="fa fa-chevron-left"></i> Web
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/20/study/" rel="prev" title="2018 Web 开发者最佳学习路线">
+                2018 Web 开发者最佳学习路线 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2018/01/20/rgp/"
+     data-title="常见的正则表达式"
+     data-content=""
+     data-url="https://guitarhusky.github.io/2018/01/20/rgp/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div class="ds-thread" data-thread-key="2018/01/20/rgp/"
+           data-title="常见的正则表达式" data-url="https://guitarhusky.github.io/2018/01/20/rgp/">
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/favicon-32x32-next.ico"
+                alt="Guitar Husky" />
+            
+              <p class="site-author-name" itemprop="name">Guitar Husky</p>
+              <p class="site-description motion-element" itemprop="description">This is my blogs</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/GuitarHusky" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#去除首尾的"><span class="nav-text">去除首尾的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-、javascript-void-0"><span class="nav-text">javascript:; 、javascript:void(0)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匹配"><span class="nav-text">匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匹配一些字符"><span class="nav-text">匹配一些字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字符替换"><span class="nav-text">关键字符替换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换参数中的值"><span class="nav-text">替换参数中的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调换"><span class="nav-text">调换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串截取"><span class="nav-text">字符串截取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证"><span class="nav-text">验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小数点后几位验证"><span class="nav-text">小数点后几位验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密码强度正则"><span class="nav-text">密码强度正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验中文"><span class="nav-text">校验中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含中文正则"><span class="nav-text">包含中文正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#由数字、26个英文字母或下划线组成的字符串"><span class="nav-text">由数字、26个英文字母或下划线组成的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#身份证号正则"><span class="nav-text">身份证号正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#校验日期"><span class="nav-text">校验日期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#校验文件后缀"><span class="nav-text">校验文件后缀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户名正则"><span class="nav-text">用户名正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数正则"><span class="nav-text">整数正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字正则"><span class="nav-text">数字正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Email正则"><span class="nav-text">Email正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机号码正则"><span class="nav-text">手机号码正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL正则"><span class="nav-text">URL正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IPv4地址正则"><span class="nav-text">IPv4地址正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十六进制颜色正则"><span class="nav-text">十六进制颜色正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QQ号码正则"><span class="nav-text">QQ号码正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信号正则"><span class="nav-text">微信号正则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#车牌号正则"><span class="nav-text">车牌号正则</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">GuitarHuskyGuitar Husky</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by ">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"GuitarHusky"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js?v=5.1.3"></script>
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("7qrTcUNLepaxzXPe8LWenqpB-gzGzoHsz", "s2YTdxCXDnnWDYiiStTzEfUI");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
