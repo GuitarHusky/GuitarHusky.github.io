@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Guitar Husky Blog">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511186519&di=2f4fb15f50465ffe5682ec41a9c7c7c9&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01be7f58aa5c37a801219c77010179.gif">
-<meta property="og:updated_time" content="2018-01-20T09:47:14.485Z">
+<meta property="og:updated_time" content="2018-01-20T09:54:06.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web前端">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1511186519&di=2f4fb15f50465ffe5682ec41a9c7c7c9&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01be7f58aa5c37a801219c77010179.gif">
@@ -186,7 +186,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -270,7 +270,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T21:27:40+08:00">
                 2017-11-13
@@ -332,6 +332,26 @@
 
       
         <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1511186519&amp;di=2f4fb15f50465ffe5682ec41a9c7c7c9&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01be7f58aa5c37a801219c77010179.gif" alt=""></p>
+<a id="more"></a>
+<h1 id="2017前端发展回顾（摘自掘金）"><a href="#2017前端发展回顾（摘自掘金）" class="headerlink" title="2017前端发展回顾（摘自掘金）"></a>2017前端发展回顾（摘自掘金）</h1><h2 id="16版的React和MIT协议"><a href="#16版的React和MIT协议" class="headerlink" title="16版的React和MIT协议"></a>16版的React和MIT协议</h2><p>在前端领域，React一直独占鳌头。2017年又发布了一个重大的版本更新 <a href="https://edgecoders.com/react-16-features-and-fiber-explanation-e779544bb1b7" target="_blank" rel="external">version 16</a>。在新版本中，引入了fiber结构来支持异步UI渲染。该版本也提供了一些错误机制方便处理未预料的应用失败，以及很多<a href="https://edgecoders.com/react-16-features-and-fiber-explanation-e779544bb1b7" target="_blank" rel="external">其它功能</a>。</p>
+<p>不过，最令人惊讶的不是它的新功能新特性，而是对开源协议的更改。Facebook<a href="https://code.facebook.com/posts/300798627056246/relicensing-react-jest-flow-and-immutable-js/" target="_blank" rel="external">新的协议</a>使得很多公司不再使用React。另外，Jest, Flow, Immutable.js和GraphQL也使用了该协议。</p>
+<h2 id="Progressive-Web-Apps-PWA"><a href="#Progressive-Web-Apps-PWA" class="headerlink" title="Progressive Web Apps (PWA)"></a>Progressive Web Apps (PWA)</h2><p>我们一直在寻找一个可以使用网页技术完美支持其它客户端的方法。谷歌专研于对网页应用增强，将它转换为progressive web apps(PWA’s)。这一思路在2017年被大众迅速接受。PWA使用现代的浏览器技术使得访问网页应用的体验和原生移动应用一样。并且在性能上有了大幅度的提升，而且支持离线访问，像推送通知这样原生APP才有的功能也支持了。PWA主要是配合<code>manifest.json</code>使用了<a href="https://developers.google.com/web/fundamentals/primers/service-workers/" target="_blank" rel="external">服务工作线程(service workders)</a>。</p>
+<h2 id="Yarn的出现完善了JS软件包系统"><a href="#Yarn的出现完善了JS软件包系统" class="headerlink" title="Yarn的出现完善了JS软件包系统"></a>Yarn的出现完善了JS软件包系统</h2><p>NPM自从诞生以来已经成长巨大，但是却缺失一些很重要的特性，好在被<a href="https://yarnpkg.com/en/" target="_blank" rel="external">Yarn</a>支持了。Yarn最主要的功能就是包缓存、一个保证构建确定的锁文件、并行操作、平铺依赖关系。这些功能非常有用，以至于NPM在5.9版本也实现了。Yarn累计已经有10亿次下载(现在平均每个月125万)，在Github上有<a href="https://github.com/yarnpkg/yarn" target="_blank" rel="external">28000+</a>的收藏。就算你没有使用Yarn，Yarn对整个包管理系统的提升也让你受益。</p>
+<h2 id="CSS网格单元布局"><a href="#CSS网格单元布局" class="headerlink" title="CSS网格单元布局"></a>CSS网格单元布局</h2><p>CSS终于支持<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank" rel="external">网格单元布局</a>，浏览器很快也会进行支持。在过去，我们需要使用表格(table),<code>float</code>,<code>flex</code>和<code>inline-block</code>来实现网格布局。如今，原生的CSS网格布局让我们可以定义行列。赶紧来学习吧: <a href="https://gridbyexample.com/" target="_blank" rel="external">https://gridbyexample.com/</a>。</p>
+<h2 id="主流浏览器支持WebAssembly"><a href="#主流浏览器支持WebAssembly" class="headerlink" title="主流浏览器支持WebAssembly"></a>主流浏览器支持WebAssembly</h2><p><a href="http://webassembly.org/" target="_blank" rel="external">WebAssembly</a>(wasm)已经开始被所有主流浏览器支持。wasm是一个针对浏览器的脚本，它是一种底层级(low-level)<a href="https://en.wikipedia.org/wiki/Bytecode" target="_blank" rel="external">字节码</a>格式。因为它的底层性，执行效率可以非常高。而且还提供了<a href="http://webassembly.org/docs/js/" target="_blank" rel="external">JavaScript API</a>供前端开发者接入。火狐已经声明所有浏览器对wasm的支持。详情查看: <a href="https://blog.mozilla.org/blog/2017/11/13/webassembly-in-browsers/" target="_blank" rel="external">WebAssembly support now shipping in all major browsers</a></p>
+<h2 id="Serverless架构"><a href="#Serverless架构" class="headerlink" title="Serverless架构"></a>Serverless架构</h2><p>2017年Serverless应用持续增热，这是一种新的可以提高性能又减少资源耗费的架构。你的客户端完全从服务器从分离出来，这样就可以只关注应用本身而不是架构。一个常见的实现方法是用AWS API Gateway和AWS Lambda函数作为后台服务。如果想体验一下，从这篇博客开始吧：<a href="https://hackernoon.com/a-crash-course-on-serverless-with-node-js-632b37d58b44" target="_blank" rel="external">A crash course on Serverless with Node.js</a>。</p>
+<h2 id="Vue-js持续火爆"><a href="#Vue-js持续火爆" class="headerlink" title="Vue.js持续火爆"></a>Vue.js持续火爆</h2><p>尽管React占据这主流市场，尤雨溪大神的<a href="https://vuejs.org/" target="_blank" rel="external">Vue</a>作为一个后起之秀大放异彩。Vue基于组建的架构，它已经成为继React之后的首选。Vue已经被大型公司使用比如<a href="https://about.gitlab.com/2017/11/09/gitlab-vue-one-year-later/" target="_blank" rel="external">GitLab</a>。</p>
+<p><a href="https://blog.fundebug.com/2017/12/25/a-recap-of-frontend-dev-2017/vue.png" target="_blank" rel="external">!](https://blog.fundebug.com/2017/12/25/a-recap-of-frontend-dev-2017/vue.png)</a></p>
+<p><a href="https://fundebug.com/" target="_blank" rel="external">Fundebug</a>是全栈JavaScript错误监控平台，支持各种前端和后端框架，可以帮助您第一时间发现BUG！</p>
+<h2 id="CSS-in-JS"><a href="#CSS-in-JS" class="headerlink" title="CSS-in-JS"></a>CSS-in-JS</h2><p>JavaScript的技术不断的演进，生态系统逐渐稳定。CSS技术也不断在进步。2017年，主要的进步一些单调的特性改进和吸收CSS-in-JS，也就是说我们可以通过写JS代码来定义CSS。现在还不清楚该技术是否能否主导未来的CSS走向，不多这种新颖的技术确实解决了基于组件开发的应用中很多的问题。</p>
+<p>2017年，Max Stoiber, Glen Maddern, Phil Plückthun开发的<a href="https://www.styled-components.com/" target="_blank" rel="external">styled-components</a>占据了主导地位。Kye Hohenberger开发的<a href="https://github.com/emotion-js/emotion" target="_blank" rel="external">Emotion</a>库被广泛使用。<a href="https://glamorous.rocks/" target="_blank" rel="external">Glamorous</a>也是一个不错的选择，由PayPal的Kent C. Doods, 和一批充满激情的开发者维护。阅读这篇文章了解更多: <a href="https://alligator.io/react/css-in-js-roundup-styling-react-components/" target="_blank" rel="external">CSS-in-JS Roundup: Styling React Components</a>。</p>
+<h2 id="静态网站生成"><a href="#静态网站生成" class="headerlink" title="静态网站生成"></a>静态网站生成</h2><p>2017年静态网站生成也开始热起来。像<a href="https://www.gatsbyjs.org/" target="_blank" rel="external">Gatsby</a>这样的网站可以使用React等现代工具来构建静态网页。不是所有的网站都需要复杂的网页技术。静态网站生成会给您更加极致的网页访问速度。如果您在寻找合适的例子，React官方文档就是使用Gatsby生成的。</p>
+<p>静态网站生成有一套工具简称为JAMStack：JavaScript，APIs，Markup。JAMStack使用预编译好的HTML文件，可复用的APIs以及JavaScript代码来处理请求。<a href="https://medium.com/@Netlify" target="_blank" rel="external">Netlify</a>是一个很好的工具并且提供免费的Host服务。Brian Douglas 写了一篇很好的文章：<a href="https://www.netlify.com/blog/2017/06/06/jamstack-vs-isomorphic-server-side-rendering/" target="_blank" rel="external">通过实现Hacker News来对比JAMStack和服务端渲染APP的优劣</a>。</p>
+<h2 id="GraphQL"><a href="#GraphQL" class="headerlink" title="GraphQL"></a>GraphQL</h2><p><a href="http://graphql.org/" target="_blank" rel="external">GraphQL</a>日趋火爆，有胜过REST之势。Samer Buna甚至宣传<a href="https://medium.freecodecamp.org/rest-apis-are-rest-in-peace-apis-long-live-graphql-d412e559d8e4" target="_blank" rel="external">REST已死</a>。GraphQL允许客户端自定义数据，然后一次获取。而REST方案需要维护获取很多无效数据。Github的<a href="https://developer.github.com/v4/" target="_blank" rel="external">新版API已经使用GraphQL重写</a>。Johannes Schickling为此开发了Graphcool(GraphQL Backend Development Framework)框架。</p>
+<h2 id="React-Router-4"><a href="#React-Router-4" class="headerlink" title="React Router 4"></a>React Router 4</h2><p>由Ryan Florence和Michael Jackson开发的React Router最开始仅仅是React中可以使用的一个router包，而现在已经完全变成真正的React Router，成为React的部件之一。所有的API都基本稳定，React Training Team承诺该项目不会有大的变动，可以放心使用。</p>
+<h2 id="Angular快速发布了v4和v5"><a href="#Angular快速发布了v4和v5" class="headerlink" title="Angular快速发布了v4和v5"></a>Angular快速发布了v4和v5</h2><p>在悄悄地跳过Angular 3之后，Angular 4在3月23号正式发布。在Angular 4中，Angular团队吸收了社区项目Angular Universal。Angular Universal提供了服务端渲染Angular应用的机制。Angular Animation从<code>@angular/core</code>中移出。如果你需要使用，需要手动引入。Angular的AOT编译(Ahead Of Time compilation)经过重构，性能提升。而生成的代码的体积也大幅缩小，最多可达60%。</p>
+<p>在版本5中实现了一些等待了很久的改进功能。Angular 5提供了<code>@angular/service-worker</code>，因此创建PWA变得非常简单。Angular的编译器经过优化，编译时间缩短。Angular Router将所有生命周期Hook暴露，包括ActivationStart, ActivationEnd, ResolveStart, and ResolveEnd。</p>
+<h2 id="TypeScript和Flow"><a href="#TypeScript和Flow" class="headerlink" title="TypeScript和Flow"></a>TypeScript和Flow</h2><p><a href="https://www.typescriptlang.org/" target="_blank" rel="external">TypeScript</a>有大量的开发者拥泵，<a href="https://flow.org/" target="_blank" rel="external">Flow</a>提供了一个灵活地引入类型的方法可以避免对现有代码进行大量的重构。很多开发者都抱怨JavaScript没有类型，微软设计的TypeScript应运而生，在最新版本的Angular中，TypeScript已经是默认配置。Flow是Facebook实验室研发的一个类型检查工具。</p>
 
       
     </div>
@@ -455,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -476,7 +505,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -520,6 +549,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2017前端发展回顾（摘自掘金）"><span class="nav-text">2017前端发展回顾（摘自掘金）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#16版的React和MIT协议"><span class="nav-text">16版的React和MIT协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Progressive-Web-Apps-PWA"><span class="nav-text">Progressive Web Apps (PWA)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yarn的出现完善了JS软件包系统"><span class="nav-text">Yarn的出现完善了JS软件包系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS网格单元布局"><span class="nav-text">CSS网格单元布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主流浏览器支持WebAssembly"><span class="nav-text">主流浏览器支持WebAssembly</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Serverless架构"><span class="nav-text">Serverless架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-js持续火爆"><span class="nav-text">Vue.js持续火爆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-in-JS"><span class="nav-text">CSS-in-JS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态网站生成"><span class="nav-text">静态网站生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GraphQL"><span class="nav-text">GraphQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#React-Router-4"><span class="nav-text">React Router 4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Angular快速发布了v4和v5"><span class="nav-text">Angular快速发布了v4和v5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TypeScript和Flow"><span class="nav-text">TypeScript和Flow</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -543,7 +588,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  ">Hexo</a></div>
+  <div class="powered-by">Powered by ">Hexo</a></div>
 
 
 

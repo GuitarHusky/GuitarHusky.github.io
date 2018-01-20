@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -273,7 +273,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T17:37:38+08:00">
                 2018-01-20
@@ -340,7 +340,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/20/study/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -421,7 +421,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T17:21:00+08:00">
                 2018-01-20
@@ -483,39 +483,14 @@
 
       
         
-          
-            <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1516450431931&amp;di=6e2cd2316ead8b91540ae1c3c8f0d076&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.imooc.com%2F57ab14aa0001bc9706000338.jpg" alt=""></p>
-<h2 id="去除首尾的"><a href="#去除首尾的" class="headerlink" title="去除首尾的"></a>去除首尾的</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//去除首尾的‘/’</div><div class="line">input = input.replace(/^\/*|\/*$/g,&apos;&apos;);</div></pre></td></tr></table></figure>
-<h2 id="javascript-、javascript-void-0"><a href="#javascript-、javascript-void-0" class="headerlink" title="javascript:; 、javascript:void(0)"></a>javascript:; 、javascript:void(0)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">href.match(/^(javascript\s*\:|#)/);</div></pre></td></tr></table></figure>
-<h2 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var str = &quot;access_token=dcb90862-29fb-4b03-93ff-5f0a8f546250; refresh_token=702f4815-a0ff-456c-82ce-24e4d7d619e6; account_uid=1361177947320160506170322436&quot;;</div><div class="line">str.match(/account_uid=([^\=]+(\;)|(.*))/ig);</div></pre></td></tr></table></figure>
-<h2 id="匹配一些字符"><a href="#匹配一些字符" class="headerlink" title="匹配一些字符"></a>匹配一些字符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = &apos;asdf html-webpack-plugin for &quot;index/index.html&quot; asdfasdf&apos;;</div><div class="line">str.match(/html-webpack-plugin for \&quot;(.*)\&quot;/ig);</div><div class="line">console.log(RegExp.$1) //=&gt;index/index.html</div></pre></td></tr></table></figure>
-<h2 id="关键字符替换"><a href="#关键字符替换" class="headerlink" title="关键字符替换"></a>关键字符替换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;css/[hash:8].index-index.css&apos;.replace(/\[(?:(\w+):)?(contenthash|hash)(?::([a-z]+\d*))?(?::(\d+))?\]/ig,&apos;(.*)&apos;);</div><div class="line">//=&gt; css/(.*).index-index.css</div></pre></td></tr></table></figure>
-<h2 id="替换参数中的值"><a href="#替换参数中的值" class="headerlink" title="替换参数中的值"></a>替换参数中的值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var str  = &apos;&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&apos;;</div><div class="line">str.replace(/&lt;html[^&gt;]*manifest=&quot;([^&quot;]*)&quot;[^&gt;]*&gt;/,function(word)&#123;</div><div class="line">   return word.replace(/manifest=&quot;([^&quot;]*)&quot;/,&apos;manifest=&quot;&apos;+url+&apos;&quot;&apos;);</div><div class="line">&#125;).replace(/&lt;html(\s?[^\&gt;]*\&gt;)/,function(word)&#123;</div><div class="line">    if(word.indexOf(&apos;manifest&apos;)) return word;</div><div class="line">    return word.replace(&apos;&lt;html&apos;,&apos;&lt;html manifest=&quot;&apos;+url+&apos;&quot;&apos;);</div><div class="line">&#125;);</div><div class="line">//原：&lt;!DOCTYPE html&gt;&lt;html manifest=&quot;../../cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">//替换成=&gt; &lt;!DOCTYPE html&gt;&lt;html manifest=&quot;cache.manifest&quot; lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;</div></pre></td></tr></table></figure>
-<h2 id="调换"><a href="#调换" class="headerlink" title="调换"></a>调换</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var name = &quot;Doe, John&quot;; </div><div class="line">name.replace(/(\w+)\s*, \s*(\w+)/, &quot;$2 $1&quot;); </div><div class="line">//=&gt; &quot;John Doe&quot;</div></pre></td></tr></table></figure>
-<h2 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var str = &apos;asfdf === sdfaf ##&apos;</div><div class="line">str.match(/[^===]+(?=[===])/g) // 截取 ===之前的内容</div><div class="line"></div><div class="line">str.replace(/\n/g,&apos;&apos;)  // 替换字符串中的 \n 换行字符</div></pre></td></tr></table></figure>
-<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="小数点后几位验证"><a href="#小数点后几位验证" class="headerlink" title="小数点后几位验证"></a>小数点后几位验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 精确到1位小数</div><div class="line">/^[1-9][0-9]*$|^[1-9][0-9]*\.[0-9]$|^0\.[0-9]$/.test(1.2);</div><div class="line"></div><div class="line">// 精确到2位小数</div><div class="line">/^[0-9]+(.[0-9]&#123;2&#125;)?$/.test(1.221);</div></pre></td></tr></table></figure>
-<h3 id="密码强度正则"><a href="#密码强度正则" class="headerlink" title="密码强度正则"></a>密码强度正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</div><div class="line">/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$/.test(&quot;weeeeeeeW2&quot;);</div><div class="line">//密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</div><div class="line">/^.*(?=.&#123;6,&#125;)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/.test(&quot;diaoD123#&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="校验中文"><a href="#校验中文" class="headerlink" title="校验中文"></a>校验中文</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是d&quot;); //false</div><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是&quot;); //true</div><div class="line">/^[\u4e00-\u9fa5]&#123;0,&#125;$/.test(&quot;但是&quot;); //true</div></pre></td></tr></table></figure>
-<h3 id="包含中文正则"><a href="#包含中文正则" class="headerlink" title="包含中文正则"></a>包含中文正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/[\u4E00-\u9FA5]/.test(&quot;但是d&quot;) //true</div></pre></td></tr></table></figure>
-<h3 id="由数字、26个英文字母或下划线组成的字符串"><a href="#由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26个英文字母或下划线组成的字符串"></a>由数字、26个英文字母或下划线组成的字符串</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/^\w+$/.test(&quot;ds2_@#&quot;); // false</div></pre></td></tr></table></figure>
-<h3 id="身份证号正则"><a href="#身份证号正则" class="headerlink" title="身份证号正则"></a>身份证号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//身份证号（18位）正则</div><div class="line">/^[1-9]\d&#123;5&#125;(18|19|([23]\d))\d&#123;2&#125;((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d&#123;3&#125;[0-9Xx]$/.test(&quot;42112319870115371X&quot;);</div><div class="line">//输出 false</div></pre></td></tr></table></figure>
-<h3 id="校验日期"><a href="#校验日期" class="headerlink" title="校验日期"></a>校验日期</h3><p>“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//日期正则，简单判定,未做月份及日期的判定</div><div class="line">var dP1 = /^\d&#123;4&#125;(\-)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$/;</div><div class="line">//输出 true</div><div class="line">console.log(dP1.test(&quot;2017-05-11&quot;));</div><div class="line">//输出 true</div><div class="line">console.log(dP1.test(&quot;2017-15-11&quot;));</div><div class="line">//日期正则，复杂判定</div><div class="line">var dP2 = /^(?:(?!0000)[0-9]&#123;4&#125;-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]&#123;2&#125;(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/;</div><div class="line">//输出 true</div><div class="line">console.log(dP2.test(&quot;2017-02-11&quot;));</div><div class="line">//输出 false</div><div class="line">console.log(dP2.test(&quot;2017-15-11&quot;));</div><div class="line">//输出 false</div><div class="line">console.log(dP2.test(&quot;2017-02-29&quot;));</div><div class="line">// true</div></pre></td></tr></table></figure>
-<h2 id="校验文件后缀"><a href="#校验文件后缀" class="headerlink" title="校验文件后缀"></a>校验文件后缀</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  var strRegex = &quot;(.jpg|.gif|.txt)&quot;;</div><div class="line">  var re=new RegExp(strRegex);</div><div class="line">  if (re.test(str))&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpgsss&apos;); //=&gt; false</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test(&apos;a/b/c.jpg?&apos;); //=&gt; true</div></pre></td></tr></table></figure>
-<h3 id="用户名正则"><a href="#用户名正则" class="headerlink" title="用户名正则"></a>用户名正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//用户名正则，4到16位（字母，数字，下划线，减号）</div><div class="line">/^[a-zA-Z0-9_-]&#123;4,16&#125;$/.test(&quot;diaodiao&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="整数正则"><a href="#整数正则" class="headerlink" title="整数正则"></a>整数正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^\d+$/.test(&quot;42&quot;);    //正整数正则  -&gt; 输出 true</div><div class="line">/^-\d+$/.test(&quot;-42&quot;);  //负整数正则  -&gt; 输出 true</div><div class="line">/^-?\d+$/.test(&quot;-42&quot;); //整数正则  -&gt; 输出 true</div></pre></td></tr></table></figure>
-<h3 id="数字正则"><a href="#数字正则" class="headerlink" title="数字正则"></a>数字正则</h3><p>可以是整数也可以是浮点数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^\d*\.?\d+$/.test(&quot;42.2&quot;);     //正数正则  -&gt; 输出 true</div><div class="line">/^-\d*\.?\d+$/.test(&quot;-42.2&quot;);   //负数正则 -&gt; 输出 true</div><div class="line">/^-?\d*\.?\d+$/.test(&quot;-42.2&quot;);  //数字正则 -&gt; 输出 true</div></pre></td></tr></table></figure>
-<h3 id="Email正则"><a href="#Email正则" class="headerlink" title="Email正则"></a>Email正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//Email正则</div><div class="line">/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]&#123;2,4&#125;)$/.test(&quot;wowohoo@qq.com&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="手机号码正则"><a href="#手机号码正则" class="headerlink" title="手机号码正则"></a>手机号码正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//手机号正则</div><div class="line">/^1[34578]\d&#123;9&#125;$/.test(&quot;13611778887&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="URL正则"><a href="#URL正则" class="headerlink" title="URL正则"></a>URL正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//URL正则</div><div class="line">/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]&#123;2,6&#125;)([\/\w \.-]*)*\/?$/.test(&quot;http://wangchujiang.com&quot;);</div><div class="line">//输出 true</div><div class="line"></div><div class="line">//获取url中域名、协议正则 &apos;http://xxx.xx/xxx&apos;,&apos;https://xxx.xx/xxx&apos;,&apos;//xxx.xx/xxx&apos;</div><div class="line">/^(http(?:|s)\:)*\/\/([^\/]+)/.test(&quot;http://www.baidu.com&quot;);</div><div class="line"></div><div class="line">// 必须有协议 </div><div class="line">/^[a-zA-Z]+:\/\//.test(&quot;http://www.baidu.com&quot;);</div></pre></td></tr></table></figure>
-<h3 id="IPv4地址正则"><a href="#IPv4地址正则" class="headerlink" title="IPv4地址正则"></a>IPv4地址正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//ipv4地址正则</div><div class="line">/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)&#123;3&#125;(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(&quot;192.168.130.199&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="十六进制颜色正则"><a href="#十六进制颜色正则" class="headerlink" title="十六进制颜色正则"></a>十六进制颜色正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//RGB Hex颜色正则</div><div class="line">/^#?([a-fA-F0-9]&#123;6&#125;|[a-fA-F0-9]&#123;3&#125;)$/.test(&quot;#b8b8b8&quot;);</div><div class="line">//输出 true</div></pre></td></tr></table></figure>
-<h3 id="QQ号码正则"><a href="#QQ号码正则" class="headerlink" title="QQ号码正则"></a>QQ号码正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//QQ号正则，5至11位</div><div class="line">/^[1-9][0-9]&#123;4,10&#125;$/.test(&quot;398188661&quot;);//输出 true</div></pre></td></tr></table></figure>
-<h3 id="微信号正则"><a href="#微信号正则" class="headerlink" title="微信号正则"></a>微信号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//微信号正则，6至20位，以字母开头，字母，数字，减号，下划线</div><div class="line">/^[a-zA-Z]([-_a-zA-Z0-9]&#123;5,19&#125;)+$/.test(&quot;jslite&quot;); //输出 true</div></pre></td></tr></table></figure>
-<h3 id="车牌号正则"><a href="#车牌号正则" class="headerlink" title="车牌号正则"></a>车牌号正则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//车牌号正则</div><div class="line">/^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]&#123;1&#125;[A-Z]&#123;1&#125;[A-Z0-9]&#123;4&#125;[A-Z0-9挂学警港澳]&#123;1&#125;$/.test(&quot;沪B99116&quot;) //输出 true</div></pre></td></tr></table></figure>
-
-          
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1516450431931&amp;di=6e2cd2316ead8b91540ae1c3c8f0d076&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.imooc.com%2F57ab14aa0001bc9706000338.jpg" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/20/rgp/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -593,7 +568,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-13T21:27:40+08:00">
                 2017-11-13
@@ -655,10 +630,14 @@
 
       
         
-          
-            <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1511186519&amp;di=2f4fb15f50465ffe5682ec41a9c7c7c9&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01be7f58aa5c37a801219c77010179.gif" alt=""></p>
-
-          
+          <p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1511186519&amp;di=2f4fb15f50465ffe5682ec41a9c7c7c9&amp;imgtype=jpg&amp;er=1&amp;src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01be7f58aa5c37a801219c77010179.gif" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/13/header/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -736,7 +715,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T21:21:51+08:00">
                 2017-11-10
@@ -803,7 +782,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/10/Node/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -884,7 +863,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T21:19:03+08:00">
                 2017-11-10
@@ -951,7 +930,7 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/11/10/Vue/#more" rel="contents">
-              Weiterlesen &raquo;
+              Read more &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1041,7 +1020,7 @@
                 <a href="/archives">
               
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1108,7 +1087,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  ">Hexo</a></div>
+  <div class="powered-by">Powered by ">Hexo</a></div>
 
 
 
